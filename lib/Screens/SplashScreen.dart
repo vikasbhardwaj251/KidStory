@@ -5,6 +5,32 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Home);
+    return Material(
+      child: Center(
+        child: Column(
+          children: [
+            Image.asset(
+              'assets/images/img_logo.jpg',
+              width: 300,
+              height: 300,
+              fit: BoxFit.cover,
+            ),
+
+            SizedBox(height: 30),
+
+            Text(
+              "Welcome to KidsStory",
+              maxLines: 1,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.blueAccent,
+                fontSize: 28,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
