@@ -4,6 +4,7 @@ import 'package:kid_story/Screens/HomeScreen.dart';
 import 'package:kid_story/Screens/LoginScreen.dart';
 
 import 'Screens/SplashScreen.dart';
+import 'Utils/routes.dart';
 
 void main() {
   runApp(Kidstory());
@@ -17,12 +18,10 @@ class Kidstory extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: true,
 
-      initialRoute: "/HomeScreen",
-
       routes: {
-        "/": (context) => SplashScreen(),
-        "/LoginScreen": (context) => LoginScreen(),
-        "/HomeScreen": (context) => HomeScreen(),
+        MyRoutes.splashRoute: (context) => SplashScreen(),
+        MyRoutes.loginRoute: (context) => LoginScreen(),
+        MyRoutes.homeRoute: (context) => HomeScreen(),
       },
 
       //light theme ke lea yaha property di hai

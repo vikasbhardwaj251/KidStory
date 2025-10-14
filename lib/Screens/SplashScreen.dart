@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:kid_story/Screens/LoginScreen.dart';
+import 'package:kid_story/Utils/routes.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -26,6 +28,19 @@ class SplashScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: Colors.blueAccent,
                 fontSize: 28,
+              ),
+            ),
+
+            SizedBox(height: 30),
+
+            ElevatedButton(
+              onPressed: () {
+                // Navigator.pushNamed(context, MyRoutes.loginRoute);
+                Navigator.pushReplacementNamed(context, MyRoutes.loginRoute);
+              },
+              child: Text(
+                "Continue",
+                style: TextStyle(color: Colors.black45, fontSize: 20),
               ),
             ),
           ],
